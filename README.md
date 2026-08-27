@@ -4,6 +4,8 @@
 ---
 ## [▶️ Lab Walkthrough Video](https://www.loom.com)
 
+## What this lab covers
+
 Automated patch assessment, compliance reporting, and scheduled maintenance for a small Windows Server environment, using Terraform, Powershell and Azure Update Manager. 
 
 ## The Business Problem

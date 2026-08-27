@@ -1,0 +1,9 @@
+location             = "canadacentral"
+resource_group_name  = "rg-aumlab"
+admin_username        = "labadmin"
+allowed_rdp_ip        = "YOUR_PUBLIC_IP/32"   # find at whatismyip.com — format: 1.2.3.4/32
+domain_name           = "polar.city"
+domain_netbios        = "POLAR"
+
+# admin_password is NOT set here — set as an environment variable in Fish:
+#   set -x TF_VAR_admin_password "YourPassword123!"

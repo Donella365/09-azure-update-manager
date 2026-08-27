@@ -6,7 +6,7 @@ Automated patch assessment, compliance reporting, and scheduled maintenance for 
 
 Unpatched servers are one of the most common root causes of security incidents. Knowing which machines are missing which patches, enforcing a consistent patch schedule, and producing proof of compliance is a core responsibility for any team running Windows infrastructure.
 
-Azure Update Manager is the cloud-native answer to this. It works without an agent on Azure VMs, integrates with Azure Policy for automatic enrollment, tracks a compliance record per machine, and supports both scheduled and on-demand patching.
+Azure Update Manager is the cloud-native answer to this. It works without requiring the Azure Monitor Agent and integrates directly with Azure VMs through the Azure VM Agent.
 
 This lab builds the patch management workflow: infrastructure, policy-based assessment, a scheduled maintenance window, on-demand assessment, patch installation, and compliance reporting.
 

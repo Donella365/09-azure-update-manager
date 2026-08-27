@@ -1,4 +1,7 @@
 # Azure Update Manager Lab
+Terraform · Azure · Update Manager
+---
+## [▶️ Lab Walkthrough Video](https://www.loom.com)
 
 Automated patch assessment, compliance reporting, and scheduled maintenance for a small Windows Server environment, using Terraform, Powershell and Azure Update Manager. 
 

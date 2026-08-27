@@ -39,7 +39,9 @@ Assessment and patching are two separate operations. A VM can be assessed and sh
 
 `validate-lab.ps1` queries Azure for each VM's patch assessment result, prints a pass/fail summary to the terminal, and exports the same data as JSON.
 
-![Validation Output](screenshots/02-validate-output-and-json.png)
+![Validation Output](screenshots/02a-validate-output.png)
+
+![Compliance Report JSON](screenshots/02b-validate-json.png)
 
 The JSON export exists because a compliance program needs more than something a person can read on a screen. This is the kind of artifact that gets ingested by a SIEM, attached to a ticket, or archived for an audit trail.
 

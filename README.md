@@ -1,6 +1,6 @@
 # Azure Update Manager Lab
 
-Automated patch assessment, compliance reporting, and scheduled maintenance for a small Windows Server environment, built entirely with Terraform.
+Automated patch assessment, compliance reporting, and scheduled maintenance for a small Windows Server environment, using Terraform, Powershell and Azure Update Manager. 
 
 ## The Business Problem
 
@@ -8,7 +8,7 @@ Unpatched servers are one of the most common root causes of security incidents. 
 
 Azure Update Manager is the cloud-native answer to this. It works without an agent on Azure VMs, integrates with Azure Policy for automatic enrollment, tracks a compliance record per machine, and supports both scheduled and on-demand patching.
 
-This lab builds that full pipeline from scratch: infrastructure, policy-based enrollment, a maintenance window, on-demand assessment, and a compliance report you can hand to an auditor.
+This lab builds the patch management workflow: infrastructure, policy-based assessment, a scheduled maintenance window, on-demand assessment, patch installation, and compliance reporting.
 
 ## Architecture
 
@@ -65,6 +65,7 @@ Three checks confirm the deployment matches what Terraform built.
 
 | Problem | Cause | Fix |
 | --- | --- | --- |
+| Maintenance Assignment returns patch orchestration error | VM patch mode isn't compatible with user-scheduled maintenance | Set patch_mode = "AutomaticByPlatform" and enable bypass of platform safety checks for user schedules |
 | Provider registration error during apply | `Microsoft.Maintenance` or `Microsoft.GuestConfiguration` not registered | Run `az provider show` for each namespace, wait until Registered, re-apply |
 | 403 on Key Vault secret during apply | RBAC role assignment hasn't propagated yet | Re-run `terraform apply`, it resumes from the failed resource |
 | DC01 extension fails or times out | AD promotion failure or transient Azure timeout | Re-run `terraform apply`, check Portal → DC01 → Extensions for the real error |

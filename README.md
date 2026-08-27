@@ -1,5 +1,6 @@
 # Azure Update Manager Lab
-Terraform · Azure · Update Manager
+**Terraform · Azure · Update Manager**
+
 ---
 ## [▶️ Lab Walkthrough Video](https://www.loom.com)
 
